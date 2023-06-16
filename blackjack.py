@@ -130,7 +130,7 @@ def start():
             val2 = p2[3][0]-21
             reslt = min(val1, val2, key=abs)
             print("\n--------------------------------\n")
-            print("Total Player1: "+str(p1[3][0])+"\n")
+            print("Total Player 1: "+str(p1[3][0])+"\n")
             render(p1[4])
             print("\n--------------------------------\n")
             print("Total player 2: "+str(p2[3][0])+"\n")
