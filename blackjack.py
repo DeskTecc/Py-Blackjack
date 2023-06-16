@@ -207,25 +207,32 @@ def start():
                 draw(p2)
         if(len(p1[2])!=0 and len(p2[2])!=0):
             val1 = p1[3][0]-21
-            val2 = p2[3][0]-21
-            reslt = min(val1, val2, key=abs)
+            val2 = p2[3][0]-21 
+            #reslt = min(val1, val2, key=abs)
             print("\n--------------------------------\n")
-            print("Total Player1: "+str(p1[3][0])+"\n")
+            print("Total Player 1: "+str(p1[3][0])+"\n")
             render(p1[4])
             print("\n--------------------------------\n")
             print("Total player 2: "+str(p2[3][0])+"\n")
             render(p2[4])
             if(val1>0 and val2>0):
                 if(val1==val2):
-                    w=3
+                    w=4
                 else:
                     w=4
-            elif(val1==reslt):
+            elif(val1==0 and val2<0):
                 w=1
             elif(val1>0 and val2<0):
                 w=2
             elif(val1<0 and val2>0):
                 w=1
+            elif(val1<0 and val2<0):
+                    if(val1==val2):
+                        w=3
+                    if(val1>val2):
+                        w=1
+                    if(val1<val2):
+                        w=2
             else:
                 w=2
         else:
@@ -244,6 +251,8 @@ def start():
             start()
         if keyboard.is_pressed("ENTER"):
             break
+        if keyboard.is_pressed("ESC"):
+            exit()
 while True:
     if title==0:
         cls()
@@ -254,4 +263,3 @@ while True:
         title=0
     if keyboard.is_pressed("ESC"):
         break
-    counter+=1
