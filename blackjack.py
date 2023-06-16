@@ -253,4 +253,3 @@ while True:
     if keyboard.is_pressed("ESC"):
         break
     counter+=1
-print("Times played: "+str(counter))
