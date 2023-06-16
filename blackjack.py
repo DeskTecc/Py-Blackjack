@@ -224,6 +224,8 @@ def start():
                 w=1
             elif(val1>0 and val2<0):
                 w=2
+            elif(val1<0 and val2>0):
+                w=1
             else:
                 w=2
         else:
